@@ -20,7 +20,21 @@ Route::get('list-product', 'PagesController@getListproduct');
 Route::get('meat', 'PagesController@getMeat');
 Route::get('product/{id}', 'PagesController@getProduct');
 Route::get('handbook', 'PagesController@getHandbook');
-//gọi hàm getTest trong Controller.php
-//search
+Route::get('vegetable', 'PagesController@getVegetable');
+
 Route::post('search', 'PagesController@postSearch');
-// Route::post('save-cart', 'CartController@save_cart');
+Route::post('login', 'PagesController@postLogin');
+
+Route::get('loai-san-pham/{type}', [
+	'as' => 'loaisanpham',
+	'uses' => 'PagesController@getLoaiSp'
+]);
+
+// Route::get('add-to-cart/{id}', [
+// 	'as' =>'themgiohang',
+// 	'uses' => 'PagesController@getAddtoCart'
+// ]);
+Route::get('AddCart/{id}', 'CartController@AddCart');
+// Route::get('DelCart/{id}', 'CartController@DelCart');
+
+Route::post('save-cart', 'CartController@save_cart');

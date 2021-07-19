@@ -7,6 +7,7 @@
 	<div class="row justify-content-center">
 		<div class="col-sm-6 col-12">
 			<h4>Thịt tươi</h4>
+			<p>Tìm thấy {{count($all)}} sản phẩm</p>
 		</div>
 		<div class="col-sm-6 col-12 thuc-pham" align="right">
 			<div class="dropdown" align="right">
@@ -29,7 +30,9 @@
 				  		<img src="img/{{$pr->image}}" class="card-img-top" alt="xa_lach">
 				  	</div>
 				  	<div class="card-body">
-					    <h5 class="card-title">{{$pr->name}}</h5>
+				  		<a href="{{url('product', $pr->id)}}">
+					    	<h5 class="card-title">{{$pr->name}}</h5>
+					    </a>
 					    <p class="card-text">{{$pr->price}} VNĐ</p>
 					    <a href="#" class="card-link">Thêm vào giỏ hàng</a>
 					</div>

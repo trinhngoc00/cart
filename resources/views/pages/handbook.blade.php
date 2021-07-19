@@ -4,7 +4,9 @@
 @include('layouts.big-img')
 
 <div class="container" id="handbook">
+	<h1>Cẩm nang</h1>
 	<div class="row">
+
 		<div class="col-lg-8 col-sm-8 col-12">
 			@foreach($handbook as $hb)
 			<div class="card mb-4">
